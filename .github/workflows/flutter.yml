@@ -1,0 +1,11 @@
+name: Flutter CI
+
+on:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Hello Flutter CI/CD!"
