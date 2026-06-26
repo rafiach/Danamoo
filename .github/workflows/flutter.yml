@@ -18,3 +18,9 @@ jobs:
 
       - name: Check Flutter Version
         run: flutter --version
+
+      - name: Install Dependencies
+        run: flutter pub get
+    
+      - name: Analyze Project
+        run: flutter analyze
