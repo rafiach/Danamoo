@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 import '../../../../component/custom_card.dart';
 import '../../../../helper/constant.dart';

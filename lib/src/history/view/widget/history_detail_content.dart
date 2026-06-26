@@ -73,25 +73,6 @@ class HistoryDetailContent extends StatelessWidget {
     );
   }
 
-  Widget _buildTypeIcon() {
-    return Center(
-      child: Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: _isIncome
-              ? Constant.greenLight.withValues(alpha: 0.3)
-              : Constant.orange.withValues(alpha: 0.3),
-          shape: BoxShape.circle,
-        ),
-        child: Icon(
-          _isIncome ? Icons.arrow_downward : Icons.arrow_upward,
-          color: _isIncome ? Constant.violetDarker : Constant.error,
-          size: 40,
-        ),
-      ),
-    );
-  }
-
   Widget _buildDetailRow(
     String label,
     String value, {

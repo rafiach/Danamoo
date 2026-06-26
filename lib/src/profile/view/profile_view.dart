@@ -200,9 +200,7 @@ class _ProfileViewState extends State<ProfileView> {
 
                             if (success) {
                               // Refresh data home agar list transaksi segera menyesuaikan
-                              if (user != null) {
-                                context.read<HomeProvider>().fetchData(user);
-                              }
+                              context.read<HomeProvider>().fetchData(user);
                               Utils.showSuccessSnackbar(
                                 context,
                                 'Restore data berhasil!',

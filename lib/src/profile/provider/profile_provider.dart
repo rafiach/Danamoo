@@ -169,14 +169,17 @@ class ProfileProvider extends ChangeNotifier {
 
     if (fileBytes != null) {
       if (isShare) {
-        // Opsi 1: Simpan ke cache lalu bagikan (Share)
         final directory = await getApplicationDocumentsDirectory();
         final filePath = '${directory.path}/Laporan_Transaksi.xlsx';
         File file = File(filePath);
         await file.writeAsBytes(fileBytes);
-        await Share.shareXFiles([
-          XFile(filePath),
-        ], text: 'Berikut adalah laporan transaksi Anda.');
+
+        await SharePlus.instance.share(
+          ShareParams(
+            files: [XFile(filePath)],
+            text: 'Berikut adalah laporan transaksi Anda.',
+          ),
+        );
       } else {
         // Opsi 2: Simpan ke penyimpanan perangkat (File Picker)
         await FileSaver.instance.saveAs(

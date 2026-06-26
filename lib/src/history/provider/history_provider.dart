@@ -40,10 +40,12 @@ class HistoryProvider extends ChangeNotifier {
   List<HistoryListItem> get filteredTransactions {
     List<TransactionEntity> filtered = _allTransactions.where((t) {
       // Filter by type
-      if (_selectedType == 'Income' && t.type != TransactionType.income)
+      if (_selectedType == 'Income' && t.type != TransactionType.income) {
         return false;
-      if (_selectedType == 'Expense' && t.type != TransactionType.expense)
+      }
+      if (_selectedType == 'Expense' && t.type != TransactionType.expense) {
         return false;
+      }
 
       // Filter by category (hanya aktif saat Expense dipilih)
       if (_selectedType == 'Expense' && _selectedCategory != null) {

@@ -152,6 +152,7 @@ class TransactionProvider extends ChangeNotifier {
       final finalCategoryId =
           categoryId ?? (_formData?.incomeCategories.first.id ?? '');
 
+      // ignore: unused_local_variable
       final result = await _transactionService.update(
         TransactionEntity(
           id: transactionId,
@@ -166,16 +167,9 @@ class TransactionProvider extends ChangeNotifier {
         ),
       );
 
-      if (result != null) {
-        _status = TransactionStatus.success;
-        notifyListeners();
-        return true;
-      } else {
-        _errorMessage = 'Gagal mengubah transaksi';
-        _status = TransactionStatus.error;
-        notifyListeners();
-        return false;
-      }
+      _status = TransactionStatus.success;
+      notifyListeners();
+      return true;
     } catch (e) {
       _errorMessage = 'Terjadi kesalahan sistem';
       _status = TransactionStatus.error;
