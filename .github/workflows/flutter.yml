@@ -4,15 +4,17 @@ on:
   push:
 
 jobs:
-  hello:
+  flutter-ci:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Show Files
-        run: ls -la
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.32.8"
 
-      - name: Say Hello
-        run: echo "Hello Flutter CI/CD!"
+      - name: Check Flutter Version
+        run: flutter --version
