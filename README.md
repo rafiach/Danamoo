@@ -40,11 +40,13 @@ DanaMoo adalah aplikasi pencatatan keuangan pribadi yang dikembangkan **end-to-e
 
 ## 📱 Screenshot
 
-<!-- TODO: tempel screenshot aplikasi di sini, contoh:
+
 | Home | Insight Chart | Export |
 |---|---|---|
-| ![home](assets/screenshots/home.png) | ![chart](assets/screenshots/chart.png) | ![export](assets/screenshots/export.png) |
--->
+| ![home](<img width="575" height="1280" alt="WhatsApp Image 2026-07-09 at 12 13 15" src="https://github.com/user-attachments/assets/0cfb498f-103b-4633-83b0-84c2b5210a31" />
+) | ![chart](<img width="575" height="1280" alt="WhatsApp Image 2026-07-09 at 12 13 17 (1)" src="https://github.com/user-attachments/assets/2a9cea1b-16a3-4bf1-81e4-d3e1a67242a0" />
+) | ![export](<img width="610" height="1356" alt="WhatsApp Image 2026-07-22 at 22 05 20" src="https://github.com/user-attachments/assets/93a84dda-f32e-40f0-82ed-7f2c187b14cb" />
+) |
 
 ---
 
@@ -67,15 +69,6 @@ flutter pub get
 # 4. Jalankan aplikasi
 flutter run
 ```
-
----
-
-## 🧭 Roadmap
-
-- [ ] <!-- TODO: contoh — sinkronisasi otomatis e-wallet/m-banking -->
-- [ ] <!-- TODO: kategori pengeluaran custom -->
-- [ ] <!-- TODO: tambahin rencana lain di sini -->
-
 ---
 
 ## 👤 Author
